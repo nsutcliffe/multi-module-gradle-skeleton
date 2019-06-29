@@ -38,14 +38,14 @@ subprojects {
 			target '**/*.scala'
 			trimTrailingWhitespace()
 			endWithNewline()
-            targetExclude('**/*AntiPattern.scala')
+            targetExclude('**/Scratch*.scala')
 		}
 
 		scala {
 			//scalafmt()
 			// optional: you can specify a specific version or config file
 			scalafmt('1.5.1').configFile(projectRoot + '/.scalafmt.conf')
-			targetExclude('**/*AntiPattern.scala')
+			targetExclude('**/Scratch*.scala')
 		}
 	}
 
